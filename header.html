@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Udacity Site Header</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <meta name="udacity-grader" content="tests.json">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            font-weight: 800;
+            -webkit-font-smoothing: antialiased;
+            background: white;
+            height: 85px;
+            padding: 15px;
+        }
+        
+        section {
+            padding: 16px;
+        }
+        
+        .flex-container {
+            display: flex;
+        }
+        
+        .space-between {
+            justify-content: space-between;
+        }
+        
+        .vertical-centerer {
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header-content {
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .logo {
+            width: 500px;
+            display: inline-block;
+            margin: 10px 0px;
+        }
+        
+        .menu {
+            list-style: none;
+            list-style-type: none;
+        }
+        
+        .menu>li {
+            display: inline;
+            margin-left: 37.5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="vertical-centerer flex-container">
+            <div class="flex-container space-between header-content">
+                <div>
+                    <span>
+            <img class="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk%0D%0Ab2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246%0D%0AIDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5z%0D%0APSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMu%0D%0Ab3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMDAgMzUiIHN0%0D%0AeWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIwMCAzNTsiIHhtbDpzcGFjZT0icHJlc2Vy%0D%0AdmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiMwMUIzRTM7fQoJLnN0MXtm%0D%0AaWxsOiMyRDNDNDk7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGlkPSJtYXJrXzNfIiBjbGFzcz0ic3Qw%0D%0AIiBkPSJNMTEuODE4LDBMMCw2LjY5OWwwLjAwMSwxNS40M2wwLDBDLTAuMDIxLDI5LjIxNiw1Ljc3%0D%0ANSwzNC45NzgsMTIuOTQ2LDM1CgkJYzIuMzcxLDAuMDA3LDQuNTk2LTAuNjE0LDYuNTEyLTEuNzA2%0D%0AdjBsOS41NzMtNS40MzZjMy43NzYtMS45MzYsNi4zNjItNS44Myw2LjM3Ni0xMC4zMjZsMC4wMDEt%0D%0AMTYuMTE1aDBsMCwwbC0yLjM0My0xLjM1NAoJCWwtOS41OTksNS4zNmwwLjAwMSwwLjAwMWwwLDBM%0D%0AMjMuNDY0LDIyLjJjLTAuMDAyLDAuNzE0LTAuMDM0LDEuMjM2LTAuMjIyLDIuMTE4Yy0wLjMyLDEu%0D%0AMzQ1LTAuNzcsMi4yOTEtMC44NDksMi40NTEKCQljLTAuNzMyLTAuMDUtMi4yNzgtMC40NjktMy41%0D%0AMTItMS4xOTZjLTAuNjE2LTAuMzU0LTEuMzQ5LTAuODc5LTIuMDEtMS40OTdjLTAuNDI3LTAuNDI0%0D%0ALTAuODE0LTAuODkxLTEuMTUtMS4zODYKCQljLTAuMzM5LTAuNS0wLjYzMS0xLjAzNC0wLjg2NS0x%0D%0ALjU4N2MtMC4yMzktMC41NjMtMC40MjItMS4xNTItMC41NDQtMS43NWMtMC4xMjUtMC42MTUtMC4x%0D%0ANTMtMS4yNDktMC4xNTItMS44ODRoMGwwLjAwOC0xNi4xMTQKCQlMMTEuODE4LDB6IE0xNy4yNTcs%0D%0AMzEuODQxYy0wLjY0MSwwLjI2Ni0xLjMxMSwwLjQ2OS0xLjk5MywwLjYwNWMtMC43LDAuMTM5LTEu%0D%0AMzQ2LDAuMjA5LTIuMDY4LDAuMjA3CgkJYy0wLjcyMi0wLjAwMi0xLjQ0My0wLjA3Ni0yLjE0My0w%0D%0ALjIyYy0wLjY4MS0wLjE0LTEuMzUtMC4zNDctMS45ODktMC42MTdjLTAuNjI4LTAuMjY1LTEuMjM0%0D%0ALTAuNTkyLTEuODAxLTAuOTczCgkJYy0xLjQ2Mi0xLjAxNS0yLjIxNi0xLjg5NC0yLjg2NC0yLjg0%0D%0AN2MtMC4zODItMC41NjItMC43MDktMS4xNjMtMC45NzQtMS43ODVjLTAuMjY5LTAuNjMzLTAuNDc1%0D%0ALTEuMjk2LTAuNjEyLTEuOTY5CgkJYy0wLjE0MS0wLjY5Mi0wLjE2Ny0xLjQwNS0wLjE2NS0yLjEx%0D%0AOUwyLjY0Nyw4LjAzOWw4Ljg2Mi01LjM0NWwtMC4wMTEsMTQuNzY4aDBjLTAuMDE3LDUuNjEyLDQu%0D%0AMTY0LDEwLjI5Niw5LjUwMywxMS40MjgKCQljLTAuMjA5LDAuMjQ3LTAuMzYsMC40ODQtMC41OTEs%0D%0AMC43MTFjLTAuNDgzLDAuNDc0LTEuMDA0LDAuOTE4LTEuNTY4LDEuMjkyQzE4LjI3MywzMS4yNywx%0D%0ANy44ODYsMzEuNTgsMTcuMjU3LDMxLjg0MXoKCQkgTTMyLjYwNywxOS40MzZjLTAuMTI2LDAuNTk4%0D%0ALTAuMzEyLDEuMTg1LTAuNTU1LDEuNzQ3Yy0wLjY0NCwxLjQxMi0xLjY5MiwyLjYxMi0yLjU2OCwz%0D%0ALjM4NWMtMS43ODgsMS42MjUtNC4wMTYsMi4xMjctNC4yNzMsMi4xMjgKCQljMC41MzYtMS40LDAu%0D%0AODk3LTIuOSwwLjkwMy00LjQ4NWwwLDBMMjYuMTEzLDYuNzc3aDBsNi42NDctNC4wMmwwLjAwMywx%0D%0ANC43NjhDMzIuNzYxLDE4LjE2LDMyLjczNiwxOC44MjEsMzIuNjA3LDE5LjQzNnoiLz4KCTxnIGlk%0D%0APSJ3b3JkbWFya18yXyI+CgkJPGc+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik02NS41MDcsMTku%0D%0AMzAxYzAsMi45MTMtMi40NTksNS4zMjItNS43ODQsNS4zMjJjLTMuMzI1LDAtNS43MjItMi40MDkt%0D%0ANS43MjItNS4zMjJWOC44NzZoLTEuNzY4djEwLjQ1CgkJCQljMCwzLjc1NSwyLjkyOCw3LjA1LDcu%0D%0ANDksNy4wNWM0LjU2MiwwLDcuNTYtMy4yOTUsNy41Ni03LjA1VjguODc2aC0xLjc3NVYxOS4zMDF6%0D%0AIE04NC4zNiw4Ljg3NmgtNS41NjZsMC4wMDIsMTcuMDYzbDUuNzU1LTAuMDAxCgkJCQljNS4xNDMs%0D%0AMCw4LjQxMy0zLjE1Myw4LjQxMy04LjU0NUM5Mi45NjMsMTIuMDUsODkuNTAyLDguODc2LDg0LjM2%0D%0ALDguODc2eiBNODQuMTg5LDI0LjIwNGwtMy42MjQtMC4wMTVWMTAuNjI2bDMuNjI0LTAuMDA1CgkJ%0D%0ACQljNC4xOTEsMCw3LjAxOSwyLjYxOCw3LjAxOSw2Ljc3MkM5MS4yMDgsMjEuNzU2LDg4LjQwNSwy%0D%0ANC4yMDQsODQuMTg5LDI0LjIwNHogTTEzMy42NDgsMjQuNjE3Yy00LjA2OSwwLTcuMDA0LTMuMzI1%0D%0ALTcuMDA0LTcuMzcKCQkJCWMwLTMuOTk1LDIuOTM0LTcuMDc3LDYuOTU1LTcuMDc3YzMuMjE3LDAs%0D%0ANS4yMTUsMS44NzgsNS4yMTUsMS44NzhsMC45MDItMS4yMjdjMCwwLTIuMDcxLTIuMTk4LTYuMTY2%0D%0ALTIuMTk4CgkJCQljLTQuODk5LDAtOC42NjEsMy43MzgtOC42NjEsOC42NDhjMCw0LjkzNSwzLjY2%0D%0ANSw5LjA4NCw4LjczNSw5LjA4NGM0LjIxNiwwLDYuNTU1LTIuODQ5LDYuNTU1LTIuODQ5bC0wLjk3%0D%0ANS0xLjE4CgkJCQlDMTM5LjIwNCwyMi4zMjcsMTM3LjEwOSwyNC42MTcsMTMzLjY0OCwyNC42MTd6%0D%0AIE0xNTEuMzk5LDI1LjkzOWgxLjc3MVY4Ljg3NmgtMS43NzFWMjUuOTM5eiBNMTYzLjM1MiwxMC42%0D%0AMjZoNi4xOTgKCQkJCWwtMC4wMDEsMTUuMzEyaDEuNzcyVjEwLjYyNmg2LjE5OHYtMS43NWgtMTQu%0D%0AMTY3VjEwLjYyNnogTTE5OC4wOTksOC44NzZsLTUuNDkzLDcuODYxaC0wLjA0OWwtNS41NDctNy44%0D%0ANjFoLTEuOTI1bDYuNjAxLDkuNjk2CgkJCQlsMCw3LjM2N2gxLjc3MXYtNy4zNjdMMjAwLDguODc2%0D%0ASDE5OC4wOTl6IE0xMDcuOTQ3LDguODc2bC02Ljk4MywxNy4wNDloMS44NDdsMS44NDgtNC41NjNs%0D%0ANy43NzItMS41NzRsMi40OTgsNi4xMzhoMS44NDcKCQkJCWwtNi45ODMtMTcuMDQ5SDEwNy45NDd6%0D%0AIE0xMDUuNDM2LDE5LjQ4bDMuNDEtOC4yNjVoMC4wNDhsMi44OCw2Ljk4MUwxMDUuNDM2LDE5LjQ4%0D%0AeiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8L3N2Zz4K" alt="Udacity Logo">
+          </span>
+                </div>
+                <div>
+                    <ul class="menu">
+                        <li>Nanodegree</li>
+                        <li>Catalog</li>
+                        <li>Classroom</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <p>Ewww. The header looks weird.</p>
+
+        <p>
+            You need to use Developer Tools to edit this website and pass this quiz. Make sure you read the criteria carefully because they contain the exact CSS properties that you need to change!
+        </p>
+    </section>
+</body>
+
+</html>

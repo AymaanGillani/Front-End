@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slacker Card</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <meta name="udacity-grader" content="tests.json">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #222;
+        }
+        
+        .card {
+            height: 475px;
+            width: 325px;
+            box-shadow: 0px 5px 15px 0px rgba(153, 153, 153, 0.5);
+            border-radius: 4px;
+        }
+        
+        .top {
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxz%0D%0AdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxu%0D%0AczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6%0D%0ALy93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0%0D%0AcDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAw%0D%0AL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQv%0D%0ARFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2Fw%0D%0AZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgdmVyc2lvbj0iMS4xIgogICB2aWV3Qm94PSIw%0D%0AIDAgMzUzIDM1NCIKICAgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIgogICBpZD0ic3ZnMiIKICAgaW5r%0D%0Ac2NhcGU6dmVyc2lvbj0iMC45MSByMTM3MjUiCiAgIHNvZGlwb2RpOmRvY25hbWU9InRlc3Quc3Zn%0D%0AIgogICB3aWR0aD0iMzUzIgogICBoZWlnaHQ9IjM1NCIKICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJv%0D%0Aa2U6bm9uZTtzdHJva2UtbGluZWNhcDpzcXVhcmU7c3Ryb2tlLW1pdGVybGltaXQ6MTAiPgogIDxt%0D%0AZXRhZGF0YQogICAgIGlkPSJtZXRhZGF0YTIzIj4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29y%0D%0AawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1s%0D%0APC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0%0D%0AdHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRs%0D%0AZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0%0D%0AYT4KICA8ZGVmcwogICAgIGlkPSJkZWZzMjEiIC8+CiAgPHNvZGlwb2RpOm5hbWVkdmlldwogICAg%0D%0AIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgICBib3Jk%0D%0AZXJvcGFjaXR5PSIxIgogICAgIG9iamVjdHRvbGVyYW5jZT0iMTAiCiAgICAgZ3JpZHRvbGVyYW5j%0D%0AZT0iMTAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5%0D%0APSIwIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6d2luZG93LXdp%0D%0AZHRoPSI5MDAiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iNzQ5IgogICAgIGlkPSJuYW1l%0D%0AZHZpZXcxOSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgZml0LW1hcmdpbi10b3A9Ii0xNTgi%0D%0ACiAgICAgZml0LW1hcmdpbi1sZWZ0PSItMzA3IgogICAgIGZpdC1tYXJnaW4tcmlnaHQ9Ii0zMDAi%0D%0ACiAgICAgZml0LW1hcmdpbi1ib3R0b209Ii0yMDgiCiAgICAgYm9yZGVybGF5ZXI9InRydWUiCiAg%0D%0AICAgaW5rc2NhcGU6em9vbT0iMC43NTk3MjIyMiIKICAgICBpbmtzY2FwZTpjeD0iMTczIgogICAg%0D%0AIGlua3NjYXBlOmN5PSIxNTIuMDAwMSIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMCIKICAgICBp%0D%0AbmtzY2FwZTp3aW5kb3cteT0iMCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgog%0D%0AICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc3IiAvPgogIDxjbGlwUGF0aAogICAgIGlkPSJw%0D%0ALjAiPgogICAgPHBhdGgKICAgICAgIGQ9Ik0gMCwwIDk2MCwwIDk2MCw3MjAgMCw3MjAgMCwwIFoi%0D%0ACiAgICAgICBpZD0icGF0aDUiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIw%0D%0AIgogICAgICAgc3R5bGU9ImNsaXAtcnVsZTpub256ZXJvIiAvPgogIDwvY2xpcFBhdGg+CiAgPGcK%0D%0AICAgICBjbGlwLXBhdGg9InVybCgjcC4wKSIKICAgICBpZD0iZzciCiAgICAgdHJhbnNmb3JtPSJ0%0D%0AcmFuc2xhdGUoLTMwNywtMTU4KSI+CiAgICA8cGF0aAogICAgICAgZD0ibSAwLDAgOTYwLDAgMCw3%0D%0AMjAgLTk2MCwwIHoiCiAgICAgICBpZD0icGF0aDkiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3It%0D%0AY3VydmF0dXJlPSIwIgogICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MDtm%0D%0AaWxsLXJ1bGU6bm9uemVybyIgLz4KICAgIDxwYXRoCiAgICAgICBkPSJtIDMwMS44OTUwMiwxNTYu%0D%0ANjMyNTUgMzY2LjI5OTIsMCAwLDM1Ni4yMjA0NiAtMzY2LjI5OTIsMCB6IgogICAgICAgaWQ9InBh%0D%0AdGgxMSIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzdHls%0D%0AZT0iZmlsbDojY2ZlMmYzO2ZpbGwtcnVsZTpub256ZXJvIiAvPgogICAgPHBhdGgKICAgICAgIGQ9%0D%0AIm0gMzAxLjg5NTAyLDE1Ni42MzI1NSAzNjYuMjk5MiwwIDAsMzU2LjIyMDQ2IC0zNjYuMjk5Miww%0D%0AIHoiCiAgICAgICBpZD0icGF0aDEzIgogICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVy%0D%0AZT0iMCIKICAgICAgIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6IzAwMDAwMDtzdHJv%0D%0Aa2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjpyb3VuZCIgLz4K%0D%0AICAgIDxwYXRoCiAgICAgICBkPSJtIDM5OC45OTczOCwyNzYuMDAyNjIgMCwwIGMgMCwtNDkuMTgz%0D%0ANzggMzguNTI0NjYsLTg5LjA1NTEyIDg2LjA0NzI0LC04OS4wNTUxMiBsIDAsMCBjIDIyLjgyMTE0%0D%0ALDAgNDQuNzA3NTgsOS4zODI1NyA2MC44NDQ2LDI2LjA4MzY0IDE2LjEzNjk3LDE2LjcwMTA4IDI1%0D%0ALjIwMjY0LDM5LjM1MjYgMjUuMjAyNjQsNjIuOTcxNDggbCAwLDAgYyAwLDQ5LjE4Mzc3IC0zOC41%0D%0AMjQ2Niw4OS4wNTUxMSAtODYuMDQ3MjQsODkuMDU1MTEgbCAwLDAgYyAtNDcuNTIyNTgsMCAtODYu%0D%0AMDQ3MjQsLTM5Ljg3MTM0IC04Ni4wNDcyNCwtODkuMDU1MTEgeiIKICAgICAgIGlkPSJwYXRoMTUi%0D%0ACiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgc3R5bGU9ImZp%0D%0AbGw6I2ZmZmZmZjtmaWxsLXJ1bGU6bm9uemVybyIgLz4KICAgIDxwYXRoCiAgICAgICBkPSJtIDMy%0D%0AOS4wNTUxLDUyMS42OTAzIDAsMCBjIDAsLTk0Ljg3OTk0IDY3LjU4MDMyLC0xNzEuNzk1MjkgMTUw%0D%0ALjk0NDg5LC0xNzEuNzk1MjkgbCAwLDAgYyA0MC4wMzMwOCwwIDc4LjQyNjUxLDE4LjA5OTc5IDEw%0D%0ANi43MzQxMyw1MC4zMTc2NiAyOC4zMDc2OCwzMi4yMTc4NiA0NC4yMTA3NSw3NS45MTQ2NyA0NC4y%0D%0AMTA3NSwxMjEuNDc3NjMgbCAwLDAgYyAwLDk0Ljg3OTg4IC02Ny41ODAzMiwxNzEuNzk1MjMgLTE1%0D%0AMC45NDQ4OSwxNzEuNzk1MjMgbCAwLDAgYyAtODMuMzY0NTYsMCAtMTUwLjk0NDg5LC03Ni45MTUz%0D%0ANSAtMTUwLjk0NDg5LC0xNzEuNzk1MjMgeiIKICAgICAgIGlkPSJwYXRoMTciCiAgICAgICBpbmtz%0D%0AY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtm%0D%0AaWxsLXJ1bGU6bm9uemVybyIgLz4KICA8L2c+Cjwvc3ZnPgo=);
+            height: 55%;
+            border-radius: 4px 4px 0px 0px;
+            border: 1px solid #ddd;
+            padding: 0px 16px;
+        }
+        
+        .name {
+            padding-top: calc(475px * 0.40);
+            margin: 0px;
+        }
+        
+        .status {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 4px;
+            border-radius: 5px;
+            background-color: #60D156;
+        }
+        
+        .title {
+            margin-top: 8px;
+        }
+        
+        .middle {
+            height: 5%;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            padding: 0px 16px;
+        }
+        
+        .time {
+            color: #444;
+            font-size: 0.8em;
+            padding-top: 0.2em;
+        }
+        
+        .bottom {
+            height: 40%;
+            border-radius: 0px 0px 4px 4px;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+        }
+        
+        .profile-action {
+            display: block;
+            width: 100%;
+            height: 32px;
+            font-size: 1em;
+            text-align: left;
+            border: 0px;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .profile-action:hover {
+            background-color: #00A5D2;
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <div class="top">
+                <h3 class="name">Udacity Student <span class="status"></span></h3>
+                <p class="title">Learner Extraordinaire</p>
+            </div>
+            <div class="middle">
+                <div class="time">12:34 PM local time</div>
+            </div>
+            <div class="bottom">
+                <button class="profile-action">View preferences</button>
+                <button class="profile-action">Open account settings</button>
+                <button class="profile-action">Edit your profile</button>
+                <button class="profile-action">View your files</button>
+                <button class="profile-action">Set yourself away</button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p>
+            <em>Note: the buttons have class <code>profile-action</code></em>
+        </p>
+    </section>
+</body>
+
+</html>
